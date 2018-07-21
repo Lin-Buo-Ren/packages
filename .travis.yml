@@ -52,7 +52,7 @@ script:
 
   # For a heavy build, add -m 500M --oom-kill-disable
   # -------------------------------------------------
-  - 'docker run --name $NAME -v $(pwd):/saved -v $(pwd)/ci-images.sh:/ci-images.sh
+  - 'docker run --name $NAME -v $(pwd):/on-host -v $(pwd)/ci-images.sh:/ci-images.sh
         -e BASE=$BASE -e OS=$IMAGE -e BUILD_OPTS=$BUILD_OPTS -e DEV=$DEV -e CC=gcc -e STATIC=$STATIC $IMAGE
       bash -e -c "/ci-images.sh BUILD_MOZ"
     '
