@@ -16,7 +16,7 @@ apps:
 
   b1freearchiver:
     command: desktop-launch $SNAP/bin/b1manager
-    plugs: [home, x11, unity7, gsettings, network, hardware-observe, mount-observe, network-manager, desktop-legacy]
+    plugs: [home, x11, unity7, gsettings, network, hardware-observe, mount-observe, network-manager, desktop-legacy, removable-media]
 
 parts:
   b1freearchiver:
